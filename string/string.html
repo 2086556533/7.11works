@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+
+<body>
+    <script>
+        //str.charAt(index);返回下标为index的子字符串  只能返回一个
+        var str = "hello world";
+        console.log(str.charAt(6));
+        //str.charCodeAt(index) 返回下标为index的ASCII码
+        var str = "hello world";
+        console.log(str.charCodeAt(6));
+        //String.fromCharCode(97)将ASCII码转化成字符串
+        console.log(String.fromCharCode(97, 98, 99, 100, 101, 102));//输出为abcdef
+        //str.indexOf(字符串)；查找本字符串在主字符串中第一次出现的位置
+        var str = "i am iron man";
+        console.log(str.indexOf("iron"));
+        //str.lastindexOf(字符串）  倒叙查找子字符串在主字符串第一次出现的位置；
+        var a = "i am iron man";
+        console.log(str.lastIndexOf("am"));
+        //str.replace("需要替换的内容","替换的内容")   替换
+        var a = "i am spider man";
+        console.log(str.replace("spider", "iron"));
+        //str.slice(x,y) 从x截取到y   负数代表倒数
+        var a = "i am iron man";
+        console.log(str.slice(2, 4));
+        //str.substring(x,y)  类似slice 但是不识别负数
+        var a = "i am iron man";
+        console.log(str.substring(2, 4));
+        //str.substr(x，y)  x开始下标，y截取长度  
+        var a = "i am iron man";
+        console.log(str.substr(5, 8));
+        //str.split('') 以某一字符将字符串分割
+        var a = "i am iron man";
+        console.log(str.split(''));
+        //str.toLowerCase()转小写
+        //str.toUpperCase()转大写
+        var a = "i am iron man";
+        var b = "I AM IRON MAN";
+        console.log(a.toUpperCase());
+        console.log(b.toLowerCase());
+        //str.trim() 去除字符串左右空格
+        var a = "   i am iron man     ";
+        console.log(a.trim());
+        //str.match()  在字符串内检索特定的值，或找到一个或多个正则表达式的匹配
+        var str = 'i am iron man';  //不懂
+        console.log(str.match('o'));   
+        
+       
+    </script>
+</body>
+
+</html>

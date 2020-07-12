@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arr.push(); 向数组的末尾追加元素
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        console.log(arr.length);
+        arr.push(9, 10, 11, 12);
+        console.log(arr.length);
+        //arr.unshift(); 向数组的开头添加函数
+        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(arr);
+        arr.unshift(function a() {
+
+        },
+            function b() { }
+        );
+        console.log(arr);
+        //arr.pop(); 删除末尾的元素
+        var arr=[1,2,3,4,5,6,7,8,9,10];
+        console.log(arr);
+        arr.pop();
+        console.log(arr);
+        //arr.shift(); 开头删除一个元素
+        var arr=[1,2,3,4,5,6,7,8,9];
+        console.log(arr);
+        arr.shift();
+        console.log(arr);
+        //arr.splice(位置，删除的个数，要追加的元素)，任意位置添加删除
+        var arr=[1,2,3,4,5,6,7,8,9];
+        console.log(arr);
+        arr.splice(3,3,function a(){},function b(){});
+        console.log(arr);
+        //arr.join("分隔符")  使用分隔符将数组数据隔开变为字符串  这里感觉没变化
+        var arr=[1,2,3,4,5,6,7,8,9];
+        console.log(arr);
+        arr.join("''");
+        console.log(arr);
+        //arr.slice(开始下标，结束下标)  截取数组
+        var arr=[1,2,3,4,5,6,7,8,9];
+        console.log(arr.slice(2,5));
+        //arr.concat  多个数组连接
+        var arr1=[1,2,3,4,5];
+        var arr2=[6,7,8,9];
+        console.log(arr1.concat(arr2,[10,11,12]));
+        //arr.indexOf(值)  查找值在数组中第一次出现的下标
+        var arr=[1,1,2,5,7,41,3,96,8,4,6,7,6,4,4,,3,14,45];
+        console.log(arr.indexOf(4));
+        //arr.lastindexOf(值)  倒叙查找第一次出现的位置
+        var arr=[1,2,3,4,5,6,7,8,9,12];
+        console.log(arr.lastIndexOf(5));
+        //arr.sort()   数组排序
+        var arr1=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        arr1.sort(function(a,b){
+            return a-b
+        })
+        console.log(arr1);
+        var arr2=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        console.log(arr2.sort((a,b)=>b-a));
+        //arr.filter()过滤  筛选数组中符合要求的元素
+        var arr=[456,123,456,789,123,12,45,23,45,485,89];
+        var arr1=arr.filter(function(value,index){
+            return value<100;
+        })
+        console.log(arr1);
+        //arr.map()  映射，将原数组中的元素做改变之后传给新的数组
+        var arr=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        var arr1=arr.map((value,index)=>value*3);
+        console.log(arr1);
+        //arr.some() 判断，根据判断条件判断真假，有一个为真则为真
+        var arr=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        var arr1=arr.some((value,index)=>value<10);
+        console.log(arr1);
+        //arr.every()判断，根据判断条件判断真假，有一个为假则为假
+        var arr=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        var arr1=arr.every((value,index)=>value<10);
+        console.log(arr1);
+        //arr.reverse()数组倒序
+        var arr=[5,96,4,1,2,3,6,4,0,4,8,9,7,45];
+        arr.reverse();
+        console.log(arr);
+        //Array.from 将两种对象转为数组，1.类似数组的对象2.可遍历的对象  这里看不明白
+        var a={length:2,0:"abc",5:"def"};
+        Array.from(a);
+        console.log(a);
+        //Array.of 讲一组值转为数组
+        var a=Array.of(1,2,3,4,5,6,7,8,9);
+        console.log(a);
+        //arr.includes()  
+        var a=[1,2,3,4,5,6,74,9,8];
+        console.log(arr.includes(2,0));//接受两个值  要查询的值和开始索引
+        console.log(arr.includes(5));//接受一个值   要查找的值
+        
+    </script>
+</body>
+</html>
